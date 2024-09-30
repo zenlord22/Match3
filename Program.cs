@@ -1,5 +1,7 @@
 ﻿using System;
 
+using System;
+
 class Match3Game
 {
     static int[,] grid;
@@ -10,6 +12,10 @@ class Match3Game
     static void Main()
     {
         InitializeGrid();
+        while (CheckMatches())
+        {
+            RemoveMatches();
+        }
         DisplayGrid();
 
         while (true)
